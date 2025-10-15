@@ -30,9 +30,9 @@
     // Intro.
     var $intro = $('#intro');
     if ($intro.length > 0) {
+
         // Hide intro on scroll past.
         $intro.scrollex({
-            mode: 'top',
             leave: function () {
                 $body.addClass('is-scrolled');
             },
@@ -40,6 +40,7 @@
                 $body.removeClass('is-scrolled');
             },
         });
+
     }
 
     // Posts.
