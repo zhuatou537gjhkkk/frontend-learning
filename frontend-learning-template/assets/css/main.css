@@ -2209,7 +2209,7 @@ input[type="radio"]+label:before {
     margin: 0 auto 3em auto;
     width: 100%;
     /* 新增：限制图片容器的最大宽度为其父容器的80% */
-    max-width: 40%;
+    max-width: 30%;
 }
 
 .image.main img {

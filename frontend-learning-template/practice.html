@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>HTML 实践 - 前端学习</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload is-white-text">
+
+    <div id="wrapper">
+
+        <div id="main">
+            <div class="inner">
+
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>前端学习</strong> by Zhuatou</a>
+                    <ul class="icons">
+                        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a>
+                        </li>
+                        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+                    </ul>
+                </header>
+
+                <section>
+                    <header class="main">
+                        <h1>HTML 实践</h1>
+                    </header>
+                    <p>在这里，我将通过具体的实例来展示和练习 HTML 的各项基础知识点。这个页面是我巩固学习成果、测验代码效果的试验田。</p>
+
+                    <hr class="major" />
+
+                    <h2>1. 段落与文字</h2>
+                    <p>这是标准的段落文字。在 HTML 中，我们可以使用多种标签来格式化文本。例如，这是 <b>粗体文字</b>，这是 <strong>加粗的文字</strong> (语义上更重要)。这是
+                        <i>斜体文字</i>，这是 <em>强调的文字</em>。你也可以添加 <u>下划线</u>。如果想展示代码，可以使用
+                        <code>&lt;p&gt;Hello World&lt;/p&gt;</code> 这样的形式。
+                    </p>
+                    <h1>一级标题 H1</h1>
+                    <h2>二级标题 H2</h2>
+                    <h3>三级标题 H3</h3>
+                    <blockquote>“三人行，必有我师焉。” 这是一个引用块的例子，用于突出显示引用的内容。</blockquote>
+
+                    <hr class="major" />
+
+                    <h2>2. 列表应用</h2>
+                    <div class="row">
+                        <div class="col-6 col-12-small">
+                            <h4>无序列表 (技能清单)</h4>
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript (ES6+)</li>
+                            </ul>
+                            <h4>有序列表 (学习步骤)</h4>
+                            <ol>
+                                <li>掌握 HTML 基础标签</li>
+                                <li>学习 CSS 布局与样式</li>
+                                <li>深入 JavaScript 交互逻辑</li>
+                            </ol>
+                        </div>
+                        <div class="col-6 col-12-small">
+                            <h4>嵌套列表 (项目结构)</h4>
+                            <ul>
+                                <li>项目根目录
+                                    <ul>
+                                        <li>index.html</li>
+                                        <li>assets/
+                                            <ul>
+                                                <li>style.css</li>
+                                                <li>main.js</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <hr class="major" />
+
+                    <h2>3. 数据表格</h2>
+                    <h4>前端学习进度规划表</h4>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>技术点</th>
+                                    <th>掌握程度</th>
+                                    <th>相关笔记</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>HTML 网页骨架</td>
+                                    <td>熟练</td>
+                                    <td><a href="index.html#posts" class="button small">查看笔记</a></td>
+                                </tr>
+                                <tr>
+                                    <td>CSS 网页样式</td>
+                                    <td>良好</td>
+                                    <td><a href="index.html#posts" class="button small">查看笔记</a></td>
+                                </tr>
+                                <tr>
+                                    <td>JavaScript 交互</td>
+                                    <td>正在学习</td>
+                                    <td><a href="index.html#posts" class="button small">查看笔记</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <hr class="major" />
+
+                    <h2>4. 多媒体与嵌入</h2>
+                    <h4>B站视频悬停播放效果</h4>
+                    <p>这是一个模仿 Bilibili 网站视频列表效果的实例。鼠标悬停时，视频封面会切换为自动静音播放的视频预览。点击整个区域可以在新标签页中打开原视频链接。</p>
+
+                    <a href="https://www.bilibili.com/video/BV14J4114768" target="_blank" class="bili-video-container"
+                        style="display: block; position: relative; max-width: 640px; text-decoration: none; border-radius: 6px; overflow: hidden; cursor: pointer;">
+
+                        <img class="video-cover" src="images/bilibili_cover1.jpg" alt="Pink老师前端入门教程 封面"
+                            style="width: 100%; display: block; border: 0; position: relative; z-index: 2;">
+
+                        <div class="video-player-wrapper"
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; z-index: 1; pointer-events: none;">
+                            <iframe src=""
+                                data-player-url="//player.bilibili.com/player.html?bvid=BV14J4114768&page=1&autoplay=1&muted=1&high_quality=1"
+                                scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"
+                                style="width: 100%; height: 100%;">
+                            </iframe>
+                        </div>
+                    </a>
+
+                    <h4>高级实例：图片轮播 (HTML 结构)</h4>
+                    <p>这是一个图片轮播的基础 HTML 结构。实现自动轮播需要配合 CSS 进行样式设计，并使用 JavaScript 来控制图片的切换逻辑。</p>
+                    <div class="image-carousel" style="text-align: center; padding: 20px; border: 1px solid #ddd;">
+                        <img src="images/html_pic.png" alt="HTML示例图片" style="max-width: 80%;">
+                        <p><em>图片1：HTML 结构</em></p>
+                    </div>
+
+
+                    <hr class="major" />
+
+                    <h2>5. 交互式表单</h2>
+                    <h4>学习交流与反馈</h4>
+                    <form method="post" action="#">
+                        <div class="row gtr-uniform">
+                            <div class="col-6 col-12-xsmall">
+                                <label for="demo-name">你的姓名</label>
+                                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Your Name" />
+                            </div>
+                            <div class="col-6 col-12-xsmall">
+                                <label for="demo-email">你的邮箱</label>
+                                <input type="email" name="demo-email" id="demo-email" value=""
+                                    placeholder="Your Email" />
+                            </div>
+                            <div class="col-12">
+                                <label for="demo-category">你最感兴趣的前端领域</label>
+                                <select name="demo-category" id="demo-category">
+                                    <option value="">- 请选择 -</option>
+                                    <option value="1">HTML & CSS</option>
+                                    <option value="2">JavaScript</option>
+                                    <option value="3">React/Vue</option>
+                                    <option value="4">构建工具</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label>你认为本站对你的学习有帮助吗？</label>
+                                <div class="col-4 col-12-small" style="display: inline-block;">
+                                    <input type="radio" id="priority-low" name="priority" checked>
+                                    <label for="priority-low">很有帮助</label>
+                                </div>
+                                <div class="col-4 col-12-small" style="display: inline-block;">
+                                    <input type="radio" id="priority-normal" name="priority">
+                                    <label for="priority-normal">一般</label>
+                                </div>
+                                <div class="col-4 col-12-small" style="display: inline-block;">
+                                    <input type="radio" id="priority-high" name="priority">
+                                    <label for="priority-high">需要改进</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label>希望网站增加哪些内容？ (可多选)</label>
+                                <div class="col-6 col-12-small" style="display: inline-block;">
+                                    <input type="checkbox" id="copy" name="copy">
+                                    <label for="copy">更多项目实战</label>
+                                </div>
+                                <div class="col-6 col-12-small" style="display: inline-block;">
+                                    <input type="checkbox" id="human" name="human" checked>
+                                    <label for="human">CSS 动画效果</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="demo-message">其他建议或问题</label>
+                                <textarea name="demo-message" id="demo-message" placeholder="请在此输入你的留言..."
+                                    rows="6"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <ul class="actions">
+                                    <li><input type="submit" value="提交反馈" class="primary" /></li>
+                                    <li><input type="reset" value="重置表单" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+
+                </section>
+
+            </div>
+        </div>
+
+        <div id="sidebar">
+            <div class="inner">
+
+                <section id="search" class="alt">
+                    <form method="post" action="#">
+                        <input type="text" name="query" id="query" placeholder="搜索" />
+                    </form>
+                </section>
+
+                <nav id="menu">
+                    <header class="major">
+                        <h2>菜单</h2>
+                    </header>
+                    <ul>
+                        <li><a href="index.html">主页</a></li>
+                        <li><a href="aboutme.html">关于我</a></li>
+                        <li><a href="practice.html">HTML 实践</a></li>
+                        <li>
+                            <span class="opener">学习分类</span>
+                            <ul>
+                                <li><a href="#">HTML & CSS</a></li>
+                                <li><a href="#">JavaScript 核心</a></li>
+                                <li><a href="#">框架与库</a></li>
+                                <li><a href="#">构建工具</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <header class="major">
+                        <h2>联系我</h2>
+                    </header>
+                    <p>如果您有任何问题或建议，欢迎通过以下方式与我联系。期待与您交流！</p>
+                    <ul class="contact">
+                        <li class="icon solid fa-envelope"><a href="#">Zhuatou@example.com</a></li>
+                        <li class="icon solid fa-phone">(+86) 123-4567-8900</li>
+                        <li class="icon solid fa-home">中国北京市<br />
+                            北京邮电大学</li>
+                    </ul>
+                </section>
+
+                <footer id="footer">
+                    <p class="copyright">&copy; Untitled. All rights reserved. Design: <a href="#">Zhuatou</a>.</p>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="bg"></div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        $(function () {
+            var $container = $('.bili-video-container');
+            if (!$container.length) return;
+
+            var $cover = $container.find('.video-cover');
+            var $playerWrapper = $container.find('.video-player-wrapper');
+            var $iframe = $playerWrapper.find('iframe');
+            var playerUrl = $iframe.data('player-url');
+
+            $container.hover(
+                // === 鼠标进入时 ===
+                function () {
+                    // 1. 立即为 iframe 设置 src 地址，让它开始加载
+                    if ($iframe.attr('src') !== playerUrl) {
+                        $iframe.attr('src', playerUrl);
+                    }
+
+                    // 2. 使用动画平滑过渡
+                    $cover.stop(true, false).animate({ opacity: 0 }, 300);
+                    $playerWrapper.stop(true, false).animate({ opacity: 1 }, 300);
+                },
+                // === 鼠标离开时 ===
+                function () {
+                    // 1. 反向动画
+                    $cover.stop(true, false).animate({ opacity: 1 }, 300);
+                    $playerWrapper.stop(true, false).animate({ opacity: 0 }, 300);
+
+                    // 2. 动画结束后，清空 src 以停止播放并释放资源
+                    setTimeout(function () {
+                        if (!$container.is(':hover')) {
+                            $iframe.attr('src', '');
+                        }
+                    }, 350); // 延迟时间略长于动画时间
+                }
+            );
+        });
+    </script>
+
+</body>
+
+</html>
