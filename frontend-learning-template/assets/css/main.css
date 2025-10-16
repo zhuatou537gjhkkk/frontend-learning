@@ -2205,8 +2205,11 @@ input[type="radio"]+label:before {
 
 .image.main {
     display: block;
-    margin: 0 0 3em 0;
+    /* 修改：通过auto边距使其居中，并保留底部边距 */
+    margin: 0 auto 3em auto;
     width: 100%;
+    /* 新增：限制图片容器的最大宽度为其父容器的80% */
+    max-width: 40%;
 }
 
 .image.main img {
@@ -2942,6 +2945,8 @@ button:disabled,
     -ms-flex-shrink: 1;
     flex-shrink: 1;
     width: 100%;
+    min-width: 0;
+    /* <-- 添加这一行代码来修复布局问题 */
 }
 
 #main>.inner {
@@ -3744,4 +3749,47 @@ body.is-scrolled #intro {
 
 #sidebar p {
     color: rgba(255, 255, 255, 0.75);
+}
+
+/* --- Custom Styles for White Text on generic.html --- */
+
+/* Rule to target only the page with the .is-white-text class */
+body.is-white-text #main .inner {
+    /* Set default text color to a slightly transparent white for better readability */
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Target all headings (h1, h2, etc.) */
+body.is-white-text #main .inner h1,
+body.is-white-text #main .inner h2,
+body.is-white-text #main .inner h3,
+body.is-white-text #main .inner h4 {
+    color: #ffffff;
+}
+
+/* Target bold text */
+body.is-white-text #main .inner strong,
+body.is-white-text #main .inner b {
+    color: #ffffff;
+}
+
+/* Target links */
+body.is-white-text #main .inner a {
+    color: #ffffff;
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+    /* Make the underline softer */
+}
+
+body.is-white-text #main .inner a:hover {
+    border-bottom-color: #ffffff;
+}
+
+/* Target table headers */
+body.is-white-text #main .inner table th {
+    color: #ffffff;
+}
+
+/* Make the horizontal lines lighter to match */
+body.is-white-text #main .inner hr.major {
+    border-bottom-color: rgba(255, 255, 255, 0.25);
 }

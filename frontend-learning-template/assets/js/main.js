@@ -87,10 +87,21 @@
     // Events.
 
     // Clicks.
-    $main.on('click', function (event) {
+    // Improved logic to prevent event conflicts.
+    $(document).on('click', function (event) {
+        // If the sidebar is already inactive, do nothing.
         if ($sidebar.hasClass('inactive')) {
             return;
         }
+
+        // If the click is on the toggle button or inside the sidebar, do nothing.
+        // This prevents the sidebar from closing itself immediately after opening.
+        var $target = $(event.target);
+        if ($target.closest('.toggle').length || $target.closest('#sidebar').length) {
+            return;
+        }
+
+        // Otherwise, if the click is outside, close the sidebar.
         event.preventDefault();
         event.stopPropagation();
         $sidebar.addClass('inactive');
