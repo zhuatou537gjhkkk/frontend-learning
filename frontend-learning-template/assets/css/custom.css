@@ -1,0 +1,132 @@
+.video-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    /* 默认三列布局 */
+    gap: 20px;
+    /* 视频之间的间距 */
+}
+
+.bili-video-container {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.bili-video-container img,
+.bili-video-container .video-player-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bili-video-container img {
+    z-index: 2;
+    object-fit: cover;
+}
+
+.bili-video-container .video-player-wrapper {
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.bili-video-container .video-player-wrapper iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.bili-video-container:before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+    /* 16:9 宽高比 */
+}
+
+/* --- 新增响应式调整 --- */
+@media (max-width: 980px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 在中等屏幕上变为两列 */
+    }
+}
+
+@media (max-width: 736px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+        /* 在小屏幕上变为单列 */
+    }
+}
+
+/* --- Carousel Styles --- */
+.carousel-container {
+    position: relative;
+    max-width: 80%;
+    margin: 2em auto;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    /* 使用 aspect-ratio 保持容器的16:9宽高比 */
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+}
+
+.carousel-slide {
+    display: none;
+    /* 默认隐藏所有幻灯片 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    /* 确保图片填满容器而不变形 */
+    border-radius: 6px;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    border-radius: 0 0 6px 6px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    /* 调整导航点的位置 */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.carousel-dots .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+    background-color: #ffffff;
+}
